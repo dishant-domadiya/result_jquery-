@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+    <style type="text/css">
+    	body {
+    		background-color: lightgrey;
+
+    	}
+    	#forms {
+    		text-align: center;
+    	}
+    	input {
+    		padding-top: 5px;
+    	}
+    	table#entryTable{
+    		border: 1px solid black;
+    		background-color: darkgrey;
+    		margin-left: auto;
+			margin-right: auto;
+			width: 500px;
+    	}
+    	h1,h2{
+    		text-align: center;
+    		padding-top: 5px;
+    	}
+    	#registration{
+    		margin-left: auto;
+			margin-right: auto;
+
+    	}
+    	#search{
+    		width: 200px;
+    		height: 25px;
+    	}
+    	#search[placeholder]{
+    		text-align: center;
+    		font-size: 20px;
+    	}
+    </style>
+</head>
+<body>
+	<form  method="GET" name="myForm" id="forms">
+		<h1>Registration Form</h1>
+		<table cellspacing="0" cellpadding="5" id="registration">
+			<tr>
+				<td>Name</td>  
+				<td><input type="text" placeholder="Enter Name" name="name" id="name"/><br/></td>
+			</tr>
+			<tr style="text-align: right;">
+				<td colspan="2"><h3>Enter Subjects Marks</h3></td>
+			</tr>
+			<tr>
+				<td>Eng</td>
+				<td><input type="number"  name="eng" id="eng"/><br/></td>
+			</tr>
+			<tr>
+				<td>Maths</td>
+				<td><input type="number" name="maths" id="maths"/><br/></td>
+			</tr>
+			<tr>
+				<td>Guj</td>
+				<td><input type="number" name="gujrati" id="gujrati"/><br/></td>
+			</tr>
+			<tr>
+				<td><input type="button" id="button1" value="Submit"/></td>
+				<td><input type="button" id="button2" value="Update" style="display: none;" /></td>
+				<td><input type="button" id="res" value="Reset"/></td>
+			</tr>
+		</table>
+	</form>
+	<h2>User's Record</h2>
+	<table cellspacing="0" cellpadding="5" id="entryTable">
+		<h2><input type="text" placeholder="Search" id="search"></h2>
+		<thead>
+		    <th>Name</th>
+		    <th id="1">Eng</th>
+		    <th id="2">Maths</th>
+		    <th id="3">Guj</th>
+		    <th id="4">Average</th>
+		    <th>Action</th>
+		</thead>	
+
+		<tbody id="record">
+	    </tbody>
+	</table>
+
+	<script src="jqueryDemo.js" type="text/JavaScript"></script>
+
+</body>
+</html>
